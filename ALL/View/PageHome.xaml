@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALL.View.PageHome">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="50">
+
+            <Button  Text="GO ALERT" Command="{Binding btnGoAlertCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO MESSAGE" Command="{Binding btnGoEntryCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO CALCULATOR" Command="{Binding btnGoCalculatorCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO PICKER" Command="{Binding btnGoPickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

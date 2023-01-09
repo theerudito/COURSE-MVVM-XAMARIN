@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALL.View.PageAlert">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="50">
+            <Button Text="ALERTA Asincrona" Command="{Binding btnShowAlertCommand}" BackgroundColor="#0099FF" TextColor="White"/>
+            <Button Text="ALERTA Simple" Command="{Binding btnShowAlertCommandSimple}" BackgroundColor="#0099FF" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

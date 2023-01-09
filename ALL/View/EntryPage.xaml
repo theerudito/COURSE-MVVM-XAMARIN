@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALL.View.EntryPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10" VerticalOptions="Center">
+            <Entry  Placeholder="Message" Text="{Binding Mensaje}"/>
+            <Button Text="SHOW" Command="{Binding btnShowMensajeCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

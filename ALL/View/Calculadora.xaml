@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALL.View.Calculadora">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="50">
+            <Label Text="RESULT" HorizontalOptions="Center" FontSize="40"/>
+            <Label  Text="{Binding Result}" HorizontalOptions="Center" FontSize="40"/>
+            <Entry  Text="{Binding Number1}"  Placeholder="Insert Number 1" Keyboard="Numeric"/>
+            <Entry  Text="{Binding Number2}"  Placeholder="Insert Number 2" Keyboard="Numeric"/>
+            <Button Text="SUMAR" Command="{Binding btnSumaCommand}" BackgroundColor="#0099FF" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
