@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using ALL.View.Pokemon;
+using ALL.ViewModel.VMPokemon;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +11,7 @@ namespace ALL.View
         public CrudPokemon()
         {
             InitializeComponent();
+            BindingContext = new VMCrudPokemon(Navigation);
         }
     }
 }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALL.View.CrudPokemon">
+    <ContentPage.Content>
+        <Frame BackgroundColor="orange" CornerRadius="5" Margin="20">
+            <Grid BackgroundColor="white" RowDefinitions="60, *" >
+                <Label  Text="POKEDEX" VerticalOptions="Center" FontSize="40" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" />
+                <CollectionView BackgroundColor="Purple" Grid.Row="1"  >
+
+                </CollectionView>
+                <Button  Text="ADD POKEMON" Command="{Binding btnGoADDPokemonCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            </Grid>
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>
