@@ -6,7 +6,7 @@
         <Grid BackgroundColor="#282C34" RowDefinitions="80, *" >
             <StackLayout Orientation="Horizontal" Margin="10">
 
-                <Image Source="back"/>
+                <ImageButton Source="back" Command="{Binding btnBack}"  BackgroundColor="Transparent"/>
                 <Image Source="pokemon" HorizontalOptions="CenterAndExpand"/>
                 <Image Source="pokebola"/>
 
@@ -178,7 +178,9 @@
                     FontAttributes="Bold"
                     BackgroundColor="yellow"
                     TextColor="black"
-                    CornerRadius="50"/>
+                    CornerRadius="50"
+                    Command="{Binding addNewPokemon}"
+                    />
             </StackLayout>
 
 

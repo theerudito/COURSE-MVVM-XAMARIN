@@ -3,13 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ALL.View.CrudPokemon">
     <ContentPage.Content>
-        <Frame BackgroundColor="orange" CornerRadius="5" Margin="20">
-            <Grid BackgroundColor="white" RowDefinitions="60, *" >
+        <Frame BackgroundColor="silver" CornerRadius="5" Margin="20">
+            <Grid BackgroundColor="silver" RowDefinitions="60, *" >
                 <Label  Text="POKEDEX" VerticalOptions="Center" FontSize="40" HorizontalOptions="Center" TextColor="Orange" FontAttributes="Bold" />
-                <CollectionView BackgroundColor="Purple" Grid.Row="1"  >
+                <CollectionView  Grid.Row="1" ItemsSource="{Binding Lista_pokemons}"  >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowDefinitions="100, *">
 
+                                <Frame
+                                    Grid.Row="1"
+                                    WidthRequest="250"
+                                    HorizontalOptions="Center"
+                                    CornerRadius="15"
+                                    Margin="0,-40,0,0"
+                                    BackgroundColor="{Binding ColorFondo}"
+                                    >
+                                    <StackLayout Margin="0,20,0,0">
+                                        <Label Text="{Binding NumPokemon}" TextColor="#fff" CharacterSpacing="1" FontSize="18" Margin="0,0,0,5"/>
+                                        <Label Text="{Binding Nombre}" TextColor="white" CharacterSpacing="1" FontSize="18"/>
+                                        <Button
+                                            Text="{Binding Poder}"
+                                            CornerRadius="30"
+                                            HorizontalOptions="Start"
+                                            BackgroundColor="{Binding ColorPoder}"
+                                            TextTransform="None"
+                                            HeightRequest="40"
+
+                                            />
+                                    </StackLayout>
+                                </Frame>
+                                <Image
+                                    Grid.RowSpan="2"
+                                    HeightRequest="140"
+                                    VerticalOptions="StartAndExpand"
+                                    Source="{Binding Icono}"
+
+                                    />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
                 </CollectionView>
-                <Button  Text="ADD POKEMON" Command="{Binding btnGoADDPokemonCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+                <Button
+                    Text="+"
+                    FontAttributes="Bold"
+                    Grid.Row="1"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Command="{Binding btnGoADDPokemonCommand}"
+                    BackgroundColor="#0099FF"
+                    TextColor="White"
+                    CornerRadius="50"
+                    Margin="15"
+                    />
             </Grid>
         </Frame>
 

@@ -1,4 +1,8 @@
-﻿using MvvmGuia.VistaModelo;
+﻿using ALL.Data;
+using ALL.Model;
+using ALL.View;
+using ALL.View.Pokemon;
+using MvvmGuia.VistaModelo;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -15,8 +19,6 @@ namespace ALL.ViewModel.VMPokemon
         string _TextIcono;
         string _TextPower;
         string _TextColorPoder;
-
-
 
         #endregion
 
@@ -62,28 +64,37 @@ namespace ALL.ViewModel.VMPokemon
         }
 
 
-
         #endregion
 
         #region METODOS ASYNC
-        public async Task MetodoAsincrono()
+        public async Task Volver()
         {
-            await Task.Delay(1000);
+            await Navigation.PushAsync(new CrudPokemon());
+        }
 
+        public async Task Insert()
+        {
+            var function = new DataFirebase();
+
+            var parametros = new Pokemon();
+            parametros.Nombre = TextNombre;
+            parametros.ColorFondo = TextColorFondo;
+            parametros.NPokemon = TextNumPokemon;
+            parametros.Icono = TextIcono;
+            parametros.Poder = TextPower;
+            parametros.ColorPoder = TextColorPoder;
+
+
+            await function.InsertPokemon(parametros);
+            await Volver();
         }
         #endregion
 
-        #region METODOS SIMPLE
-        public void MetodoSimple()
-        {
-
-        }
-        #endregion
 
 
         #region COMANDOS
-        public ICommand AlertaAsincrona => new Command(async () => await MetodoAsincrono());
-        public ICommand AlertaSimple => new Command(() => MetodoSimple());
+        public ICommand btnBack => new Command(async () => await Volver());
+        public ICommand addNewPokemon => new Command(async () => await Insert());
         #endregion
     }
 }

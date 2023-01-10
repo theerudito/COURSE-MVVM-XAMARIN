@@ -1,8 +1,10 @@
 ﻿using ALL.Connection;
 using ALL.Model;
+using Firebase.Database;
 using Firebase.Database.Query;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 
 namespace ALL.Data
@@ -24,18 +26,26 @@ namespace ALL.Data
                 });
         }
 
-        public async Task<List<Pokemon>> GetPokemons()
+        public async Task<ObservableCollection<Pokemon>> GetPokemons()
         {
-            return (await ConnectionFirebase.firebase.Child("Pokemon").OnceAsync<Pokemon>()).Select(item => new Pokemon
-            {
-                Id = item.Object.Id,
-                Nombre = item.Object.Nombre,
-                ColorFondo = item.Object.ColorFondo,
-                NPokemon = item.Object.NPokemon,
-                Icono = item.Object.Icono,
-                Poder = item.Object.Poder,
-                ColorPoder = item.Object.ColorPoder
-            }).ToList();
+            //return (await ConnectionFirebase.firebase.Child("Pokemon").OnceAsync<Pokemon>()).Where(a => a.Key != "Modelo").Select(item => new Pokemon
+            //{
+            //    Id = item.Object.Id,
+            //    Nombre = item.Object.Nombre,
+            //    ColorFondo = item.Object.ColorFondo,
+            //    NPokemon = item.Object.NPokemon,
+            //    Icono = item.Object.Icono,
+            //    Poder = item.Object.Poder,
+            //    ColorPoder = item.Object.ColorPoder
+            //}).ToList();
+
+            var allPokemons = await Task.Run(() => ConnectionFirebase.firebase
+                .Child("Pokemon")
+
+                .AsObservable<Pokemon>()
+                .AsObservableCollection());
+
+            return allPokemons;
         }
 
         // trear un pokemon
