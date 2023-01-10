@@ -21,7 +21,7 @@
 
             <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
 
-            <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button  Text="MENU" Command="{Binding btnGoMenuCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
 
 
         </StackLayout>

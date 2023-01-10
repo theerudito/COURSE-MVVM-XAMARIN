@@ -18,8 +18,7 @@ namespace ALL.ViewModel
         public ICommand btnGoDatePickerCommand => new Command(async () => await Navigation.PushAsync(new PageDatePicker()));
         public ICommand btnGoCollectionCommand => new Command(async () => await Navigation.PushAsync(new PageCollectionView()));
         public ICommand btnGoListViewCommand => new Command(async () => await Navigation.PushAsync(new PageListView()));
-
-        //public ICommand btnGoDatePickerCommand => new Command(async () => await Navigation.PushAsync(new PageDatePicker()));
+        public ICommand btnGoMenuCommand => new Command(async () => await Navigation.PushAsync(new PageMenu()));
 
 
     }
