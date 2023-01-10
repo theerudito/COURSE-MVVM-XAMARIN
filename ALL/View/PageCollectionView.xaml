@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALL.View.PageCollectionView">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView  ItemsSource="{Binding  listCharacters}" x:Name="characters"  >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition  Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Padding="20" BackgroundColor="black" Margin="10" CornerRadius="10">
+                                <StackLayout   >
+                                    <Image  Source="{Binding Image}"  HeightRequest="100" Aspect="AspectFit"/>
+
+                                    <FlexLayout HorizontalOptions="Center">
+                                        <Label Text="ID:"    Margin="0, 0,5,0" TextColor="White"/>
+                                        <Label Text="{Binding Id}"  Margin="0, 0, 5 ,0" TextColor="White"/>
+                                    </FlexLayout>
+                                    <FlexLayout HorizontalOptions="Center">
+                                        <Label Text="Name:"    Margin="0, 0,5,0" TextColor="White"/>
+                                        <Label Text="{Binding Name}"  Margin="0, 0, 5 ,0" TextColor="White"/>
+                                    </FlexLayout>
+                                    <FlexLayout HorizontalOptions="Center">
+                                        <Label Text="Age:"    Margin="0, 0,5,0" TextColor="White"/>
+                                        <Label Text="{Binding Age}"   Margin="0, 0, 5 ,0" TextColor="White"/>
+                                    </FlexLayout>
+                                    <FlexLayout HorizontalOptions="Center">
+                                        <Label Text="Clan:"    Margin="0, 0,5,0" TextColor="White"/>
+                                        <Label Text="{Binding Clan}"   Margin="0, 0, 5 ,0" TextColor="White"/>
+                                    </FlexLayout>
+
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference characters}, Path=BindingContext.btnSelectCharacterCommand}" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="2" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

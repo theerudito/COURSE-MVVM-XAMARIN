@@ -15,6 +15,14 @@
 
             <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
 
+            <Button  Text="GO COLLECTION VIEW" Command="{Binding btnGoCollectionCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO LIST VIEW" Command="{Binding btnGoListViewCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
+            <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+
 
         </StackLayout>
     </ContentPage.Content>

@@ -16,6 +16,11 @@ namespace ALL.ViewModel
         public ICommand btnGoCalculatorCommand => new Command(async () => await Navigation.PushAsync(new Calculadora()));
         public ICommand btnGoPickerCommand => new Command(async () => await Navigation.PushAsync(new PagePicker()));
         public ICommand btnGoDatePickerCommand => new Command(async () => await Navigation.PushAsync(new PageDatePicker()));
+        public ICommand btnGoCollectionCommand => new Command(async () => await Navigation.PushAsync(new PageCollectionView()));
+        public ICommand btnGoListViewCommand => new Command(async () => await Navigation.PushAsync(new PageListView()));
+
+        //public ICommand btnGoDatePickerCommand => new Command(async () => await Navigation.PushAsync(new PageDatePicker()));
+
 
     }
 }

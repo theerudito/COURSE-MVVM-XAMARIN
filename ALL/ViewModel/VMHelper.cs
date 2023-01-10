@@ -1,5 +1,4 @@
 ﻿using MvvmGuia.VistaModelo;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
