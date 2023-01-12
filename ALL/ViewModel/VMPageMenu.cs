@@ -38,7 +38,6 @@ namespace ALL.ViewModel
                 new MMenu { Id= 5, Pages = "PickerDate Page", Icon = "https://i.postimg.cc/1tNnMmMN/web.png" },
                 new MMenu { Id= 6, Pages = "CollectionView Page", Icon = "https://i.postimg.cc/1tNnMmMN/web.png" },
                 new MMenu { Id= 7, Pages = "ListView Page", Icon = "https://i.postimg.cc/1tNnMmMN/web.png" },
-                new MMenu { Id= 8, Pages = "CRUD POKEMON", Icon = "https://i.postimg.cc/rwfHJQRr/pokebola.png" },
             };
         }
 
@@ -74,10 +73,7 @@ namespace ALL.ViewModel
             {
                 await Navigation.PushAsync(new PageListView());
             }
-            if (page.Contains("CRUD POKEMON"))
-            {
-                await Navigation.PushAsync(new CrudPokemon());
-            }
+
 
         }
         #endregion
