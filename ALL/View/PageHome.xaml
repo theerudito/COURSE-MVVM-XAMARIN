@@ -1,27 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ALL.View.PageHome">
+<ContentPage
+    x:Class="ALL.View.PageHome"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Margin="50">
+        <StackLayout Margin="50" VerticalOptions="Center">
 
-            <Button  Text="GO ALERT" Command="{Binding btnGoAlertCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoAlertCommand}"
+                Text="GO ALERT"
+                TextColor="White" />
 
-            <Button  Text="GO MESSAGE" Command="{Binding btnGoEntryCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoEntryCommand}"
+                Text="GO MESSAGE"
+                TextColor="White" />
 
-            <Button  Text="GO CALCULATOR" Command="{Binding btnGoCalculatorCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoCalculatorCommand}"
+                Text="GO CALCULATOR"
+                TextColor="White" />
 
-            <Button  Text="GO PICKER" Command="{Binding btnGoPickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoPickerCommand}"
+                Text="GO PICKER"
+                TextColor="White" />
 
-            <Button  Text="GO DATE PICKER" Command="{Binding btnGoDatePickerCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoDatePickerCommand}"
+                Text="GO DATE PICKER"
+                TextColor="White" />
 
-            <Button  Text="GO COLLECTION VIEW" Command="{Binding btnGoCollectionCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoCollectionCommand}"
+                Text="GO COLLECTION VIEW"
+                TextColor="White" />
 
-            <Button  Text="GO LIST VIEW" Command="{Binding btnGoListViewCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoListViewCommand}"
+                Text="GO LIST VIEW"
+                TextColor="White" />
 
-            <Button  Text="MENU" Command="{Binding btnGoMenuCommand}"  BackgroundColor="#0099FF" TextColor="White"/>
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoMenuCommand}"
+                Text="MENU"
+                TextColor="White" />
 
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoAPI1Command}"
+                Text="API1"
+                TextColor="White" />
 
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoAPI2Command}"
+                Text="API2"
+                TextColor="White" />
+
+            <Button
+                BackgroundColor="#0099FF"
+                Command="{Binding btnGoSUpabaseCommand}"
+                Text="Supabase"
+                TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

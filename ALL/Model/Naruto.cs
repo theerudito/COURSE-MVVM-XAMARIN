@@ -1,5 +1,4 @@
-﻿
-namespace ALL.Model
+﻿namespace ALL.Model
 {
     public class Naruto
     {
